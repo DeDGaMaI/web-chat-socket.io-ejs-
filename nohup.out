@@ -1,0 +1,101 @@
+listening on *:8080
+listening on *:8080
+listening on *:8080
+listening on *:8080
+events.js:174
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::8080
+    at Server.setupListenHandle [as _listen2] (net.js:1280:14)
+    at listenInCluster (net.js:1328:12)
+    at Server.listen (net.js:1415:7)
+    at Object.<anonymous> (/home/oleg/projects/chat/index.js:28:21)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:831:12)
+Emitted 'error' event at:
+    at emitErrorNT (net.js:1307:8)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:834:11)
+    at startup (internal/bootstrap/node.js:283:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:623:3)
+listening on *:8080
+listening on *:8080
+/home/oleg/projects/chat/index.js:23
+	fs.writeFileSync("chat.log", socket.username + ":" + messagge);
+	                                                     ^
+
+ReferenceError: messagge is not defined
+    at Socket.<anonymous> (/home/oleg/projects/chat/index.js:23:55)
+    at Socket.emit (events.js:198:13)
+    at /home/oleg/projects/chat/node_modules/socket.io/lib/socket.js:528:12
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+listening on port : 8080
+listening on port : 8080
+1
+2
+2
+1
+-1
+-1
+-1
+-1
+-3
+-3
+-4
+-5
+-5
+-5
+-5
+-5
+-6
+-6
+-6
+-25
+-27
+-27
+-28
+-29
+-32
+-31
+-32
+-33
+-33
+-33
+-60
+-63
+-62
+-63
+-63
+-63
+-65
+-65
+-65
+-65
+-65
+-64
+-63
+-64
+-64
+-64
+-65
+-65
+-65
+-65
+-65
+-174
+-174
+-174
+-175
+-177
+-177
+-177
+-177
+-177
+listening on port : 8080
+-3
+-4
