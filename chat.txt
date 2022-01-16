@@ -536,3 +536,5 @@
 [0 16 15:28:30]Liquit:im good
 [0 16 15:28:30]Oleg:okay
 [0 16 15:28:30]Liquit:online
+[Sun Jan 16 2022 15:38:47 GMT+0300 (Москва, стандартное время)]Liquit joined the chat..
+[Sun Jan 16 2022 15:40:23 GMT+0300 (Москва, стандартное время)]Liquit left the chat..

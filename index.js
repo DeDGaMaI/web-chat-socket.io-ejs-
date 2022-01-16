@@ -3,11 +3,9 @@ const app =  express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const fs = require("fs");
-var d = new Date()
-var time = d.getMonth() + " " + d.getDate() + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
 var online = 0
 
-app.get('/', (req, res) =>{
+app.get('/chat', (req, res) =>{
     res.render("index.ejs");
 })
 
@@ -15,14 +13,14 @@ io.sockets.on('connection', function(socket) {
     socket.on('username', function(username) {
         socket.username = username;
         io.emit('is_online', '🔵 <i>' + socket.username + ' joined the chat..</i>');
-		fs.appendFileSync("chat.txt", "[" + time + "]" + socket.username + " joined the chat..\n");
+		fs.appendFileSync("chat.txt", "[" + Date() + "] " + socket.username + " joined the chat..\n");
 		online = online + 1;
 		console.log(online);
     });
 
     socket.on('disconnect', function(username) {
         io.emit('is_online', '🔴 <i>' + socket.username + ' left the chat..</i>');
-		fs.appendFileSync("chat.txt", "[" + time + "]" + socket.username + " left the chat..\n");
+		fs.appendFileSync("chat.txt", "[" + Date() + "] " + socket.username + " left the chat..\n");
 		online = online - 1;
     })
 
@@ -37,7 +35,7 @@ io.sockets.on('connection', function(socket) {
 		}
 		else {
 	        io.emit('chat_message', '<strong>' + socket.username + '</strong>: ' + message);
-			fs.appendFileSync("chat.txt", "[" + time + "]" + socket.username + ":" + message + "\n");
+			fs.appendFileSync("chat.txt", "[" + Date() + "] " + socket.username + ":" + message + "\n");
 		}
 	});
 
